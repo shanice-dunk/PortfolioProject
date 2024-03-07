@@ -52,6 +52,11 @@ html {
     font-size: 25px;
   }
 
+  .projectTitles:hover {
+    color: #D9BBCE;
+    cursor: pointer;
+  }
+
   .me {
     width: 300px;
     height: 400px;

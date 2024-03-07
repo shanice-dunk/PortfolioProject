@@ -25,8 +25,8 @@
     <h2>About Me</h2>
     <article>
       <p class="about">Hello! My name is Shanice and I am a project manager looking to switch careers into tech.</p>
-      <p class="about">My background is mostly in sport - I studies sport and exercise science at Sheffield Hallam university, followed by a master's degree in sports law. I had various jobs coming out of university, but I landed by dream job at UK Anti-Doping where I worked within the testing team. I worked at UKAD for around 3 years, before switching careers into equality, diversity and inclusion. During 2020 when the murder of George Floyd happened, I wanted to learn more about EDI and how to make a workplace envrionment inclusive and psychologically safe for all.</p>
-      <p class="about">In 2022, I landed the role of EDI Officer at the Institute of Physics where I am currently managing a project that aims to help university physics departments create an inclusive environment and encourage people from different backgrounds to study physics. This was a huge career switch out of sport which I had been involved in for so many years, but I believed it was the right step to develop my skills further and to manage a project for the first time.</p>
+      <p class="about">My background is mostly in sport - I studied sport and exercise science at Sheffield Hallam university, followed by a master's degree in sports law. I had various jobs coming out of university, but I landed by dream job at UK Anti-Doping where I worked within the testing team. I worked at UKAD for around 3 years, before switching careers into equality, diversity and inclusion. During 2020 when the murder of George Floyd happened, I wanted to learn more about EDI and how to make a workplace environment inclusive and psychologically safe for all.</p>
+      <p class="about">In 2022, I landed the role of EDI Officer (Projects) at the Institute of Physics where I am currently managing a project that aims to help university physics departments create an inclusive environment and encourage people from different backgrounds to study physics. This was a huge career switch from sport which I had been involved in for so many years, but I believed it was the right step to develop my skills further in managing a large-scale project for the first time.</p>
       <p class="about">In January 2023, I started learning coding through organisations such as Code First Girls, Codeacademy and the Code Institute. After learning programming languages such as HTML, CSS, JavaScript and Python, I have created a number of projects to practice and better my skills. Creating websites and apps have unlocked a creative side that I didn't know I had! I am now working on building my portfolio, creating different projects and challenging myself.</p>
         <h3 id="fun-facts">5 Fun Facts!</h3>
         <ol class="facts">
@@ -41,11 +41,12 @@
   </section>
   <section>
     <h2 id="Projects">Projects</h2>
-      <h3>Sharks Website</h3>
+      <h3 onclick="showHide1()" class="projectTitles">Sharks Website</h3>
+      <div id="myDiv1">
       <img src="Resources/Images/Screenshot 2024-03-02 at 17.32.17.jpg" id="sharks" alt="Screenshot of the sharks project website.">
       <article class="web">
         <p class>The first web page I built was for the Code First Girls Web Development course which ran for 8 weeks. The course was an introduction to web development where I learned the fundamental skills of front-end development, including Bootstrap and UX/UI design. I learned how to build a website from scratch using HTML, CSS, Bootstrap, JavaScript, UX/UI design and GitHub. The requirements for the project are listed below.</p>
-        <p>Sharks are one of my favourite animals, so I decided to base my website around different types of sharks, with fun facts and information about how the climate change is affecting species of sharks. A link to the website can be found in the table below.</p>
+        <p>Sharks are one of my favourite animals, so I decided to base my website around different types of sharks, with fun facts and information about how climate change is affecting species of sharks. A link to the website can be found in the table below.</p>
       </article>
       <h4>'Must have' requirements:</h4>
       <ul class="web">
@@ -65,7 +66,8 @@
       <article>
         <p></p>
       </article>
-      <h3 onclick="showHide()">Harry Potter App</h3>
+    </div>
+      <h3 onclick="showHide()" class="projectTitles">Harry Potter App</h3>
       <div id="myDiv">
       <img src="Resources/Images/Screenshot 2024-03-02 at 17.25.49.jpg" alt="Screenshot of Harry Potter app" id="potter">
       <article class="web">
@@ -86,12 +88,14 @@
         <li>USe arrays, loops and/or conditional logic in JavaScript.</li>
       </ul>
       </div>
-      <h3>Jamaica Blog</h3>
+      <h3 onclick="showHide2()" class="projectTitles">Jamaica Blog</h3>
+      <div id="myDiv2">
       <img src="Resources/Images/Screenshot 2024-03-02 at 17.37.06.jpg" id="jamaica" alt="Screenshot of Jamaica blog.">
       <article class="web">
         <p>This blog page is something I have been working on solo, using everything that I have learned so far through Codeacademy, Code First Girls and other providers. It is still a working progress, but a link to the blog can be found in the table below.</p>
-        <p>I decided to create a blog page on my family holiday to Jamaica as it was our first time going for a holiday, which was a very special moment for us as my grandparents were born in Jamaica and travelled to England during the Windrush generation. Growing up, I have always felt proud of my roots and I always wanted to go to Jamaica, to get a taste of what it as like for my grandparents growing up. It may have taken us a long time to book the damn holiday, but we did it! The blog page will talk about my family history, what we did in Jamaica and some travel tips for those who are also thinkning of visiting.</p>
+        <p>I decided to create a blog page based on my family holiday to Jamaica as it was our first time travelling there. It was a very special moment for us as my grandparents were born in Jamaica and travelled to England during the Windrush generation. Growing up, I have always felt proud of my roots and I always wanted to go to Jamaica, to get a taste of what it as like for my grandparents growing up. It may have taken us a long time to book the damn holiday, but we did it! The blog page will talk about my family history, what we did in Jamaica and some travel tips for those who are also thinking of visiting.</p>
       </article>
+    </div>
     <table class="centre">
       <tr>
         <th scope="col">Project</th>
@@ -136,9 +140,29 @@
 </footer>
 
 <script>
-// Show and hide project section (Harry Potter one)
+// Show and hide shark project section 
+function showHide1() {
+  var x = document.getElementById("myDiv1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none"
+  }
+}  
+ 
+// Show and hide HP project section
 function showHide() {
   var x = document.getElementById("myDiv");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none"
+  }
+}  
+
+// Show and hide Jamaica project section
+function showHide2() {
+  var x = document.getElementById("myDiv2");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
